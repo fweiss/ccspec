@@ -9,6 +9,6 @@ if(MSVC) # issue-10
         )
 endif()
 
-set_target_properties(ccspec PROPERTIES VERSION "0.1.1")
+set_target_properties(ccspec PROPERTIES VERSION "0.1.2")
 target_include_directories(ccspec PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../include")
 install(TARGETS ccspec DESTINATION lib)

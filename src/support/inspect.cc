@@ -96,9 +96,11 @@ string inspect(long double val) {
   return ss.str();
 }
 
+// issue-12, don't rely on operator<<(void*) to print pointer values
+// as it may not be portable across different platforms
 string inspect(void* val) {
   ostringstream ss;
-  ss << val;
+  ss << std::showbase << std::hex << reinterpret_cast<uintptr_t>(val);
   return ss.str();
 }
 
