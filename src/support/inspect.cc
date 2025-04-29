@@ -19,11 +19,14 @@ string inspect(char val) {
   return ss.str();
 }
 
+// [issue-8] since uint8_t is an unsigned char, we need to force
+// ostringstream to use numerical value
 string inspect(unsigned char val) {
   ostringstream ss;
-  ss << val;
+  ss << static_cast<int>(val);
   return ss.str();
 }
+
 string inspect(bool val) {
   ostringstream ss;
   ss << std::boolalpha << val;

@@ -22,9 +22,9 @@ auto inspect_spec = describe("::inspect", [] {
     expect(inspect(c)).to(eq("x"));
   });
 
-  it("returns the string value for unsigned char", [] {
-    unsigned char c = 'x';
-    expect(inspect(c)).to(eq("x"));
+  it("returns the numerical value for unsigned char", [] {
+    unsigned char c = 55;
+    expect(inspect(c)).to(eq("55"));
   });
 
   it("returns the string value for bool", [] {
