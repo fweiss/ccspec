@@ -1,4 +1,3 @@
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 file(GLOB_RECURSE SRC "*.h" "*.cc")
 add_library(ccspec STATIC ${SRC})
 
